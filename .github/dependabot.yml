@@ -1,0 +1,6 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /tools/poc-vectors
+    schedule:
+      interval: weekly
