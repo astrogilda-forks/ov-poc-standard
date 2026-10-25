@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
       - name: Install the pinned vector set
         run: python3 -m pip install -r tools/poc-vectors/requirements.txt
-      - name: Run the published vectors against the reference validator
+      - name: Verify the published vectors with the reference validator
         run: python3 schema/validate.py --vectors
-      - name: Run the pinned corpus against the independent verifier it ships
+      - name: Verify the pinned corpus with the twin verifier it ships
         run: python3 -m poc_evidence_vectors.run_vectors
